@@ -4,7 +4,7 @@ import Menu from './Component/Menu.js';
 import Master from './Component/Master.js';
 import Footer from './Component/Footer.js';
 import DirectURL from './Routers/DirectURL';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, HashRouter } from "react-router-dom";
 import MyTable from './table/MyTable';
 import {useEffect,useState} from 'react';
 import axios from 'axios';
@@ -19,6 +19,7 @@ function App() {
     })
   },[])
   return (
+    <HashRouter >
       <Router>
         <MyTable province = {province}/>
         <div className={logo}>
@@ -32,6 +33,7 @@ function App() {
           <Footer/>
         </div>
       </Router>
+    </HashRouter>
   );
 }
 
