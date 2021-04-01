@@ -19,8 +19,9 @@ function App() {
     })
   },[])
   return (
-    <HashRouter >
+    
       <Router>
+        <HashRouter >
         <MyTable province = {province}/>
         <div className={logo}>
           < Menu />
@@ -32,8 +33,9 @@ function App() {
           <Team/> */}
           <Footer/>
         </div>
+        </HashRouter>
       </Router>
-    </HashRouter>
+    
   );
 }
 
